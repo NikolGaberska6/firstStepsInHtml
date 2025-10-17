@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Cat photo app</title></head> <!--Задава името на страницата-->
+  <body> 
+        <h2> CatPhotoApp </h2>
+    <main>
+        <h3> Cat Photos </h3>
+        <div>  <!--Когато правим и CSS-->
+            <p>
+                Click here to view more cat photos 
+                <a href="https://catphotos.com" target="_blank"> cat photos </a>  <!--Слага линк на думичката cat photos-->
+            </p>
+
+            <a href="#">
+            <img src="cat1.jpeg"
+            alt="A cute white cat.">  <!--Добавяме картината на котката-->
+            </a>
+                <h3> Cat Lists </h3>
+            <p> Things cats <em>love </em> </p>  <!--С <em></em> изкриваваяме шрифта на думата-->
+               <ul> <!--Unordered list - думите нямат номера а само точки -->
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+            <img src="lasagna.jpg" alt="lasagna">  <!--Добавяме снимка от файлове (снимката трябва да е с html файла в една папка)-->
+            <p>Things cats <strong>hate</strong></p> <!--С <strong></strong> одебеляваме шрифта на думата-->
+                <ol>  <!--Ordered list - думите номера вместо точки -->
+                    <li>flea tratment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+        </div> 
+        <img src="cats.jpg" alt="Cats"> <!--Добавяме снимка от файлове (снимката трябва да е с html файла в една папка)-->
+         
+        <form action="/submit-cat-photo"> <!--Добавяме форма-->
+
+            <!--Used when you want the user to pick only ONE option from a group.
+                They share the same name attribute (indoor-outdoor), which means:
+                •	You can select either indoor OR outdoor,
+                •	but not both at the same time.-->
+            <!--Ако добавим думичката checked автоматично ни се селектват дадените секции, които сме избрали-->
+            <label for="indoor"> <input id="indoor" type="radio" name="indoor-outdoor" checked> indoor </label> <br>
+            <label for="outdoor"> <input id="outdoor" type="radio" name="indoor-outdoor"> outdoor</label> <br>
+
+            <!--Used when you want the user to pick multiple options — any combination.
+                Each checkbox can be checked or unchecked independently.-->
+            <label for="loving"> <input id="loving" type="checkbox" name="personality" checked>Loving</label> <br>
+            <label for="lazy"> <input id="lazy" type="checkbox" name="personality">Lazy</label> <br>
+            <label for="energetic"> <input id="energetic" type="checkbox" name="personality">Energetic</label><br>
+
+            <input type="text" placeholder="cat photo URL" required> <br> <!--Създава формичката в която може да се пише и 
+            placeholder е какво е изписано с по-лек шрифт(инструкции над това какво ние трябва да попълним). Ако имаме required
+            ни изписваа че е задъкжително да попилним това поле и не може да натиснем submit преди това -->
+            <button type="submit">Submit</button> <!--Какъв е типа на бътона и какво да пише на него-->>
+         </form>
+
+     </main>
+     <footer>
+        <p>No CopyRight - <a href="https://www.freecodecamp.org/"> freeCodeCamp.org </a></p> <!--Слага линк на думичката freeCodeCamp.org-->
+    </footer>
+  </body>
+</html>
